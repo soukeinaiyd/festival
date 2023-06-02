@@ -8,17 +8,15 @@
   <?php require_once "./templates/_partials/header.php";?>
   </header>
   <main>
+
   <?php 
   if (isset($_GET['page'])&&!empty($_GET['page'])){
    if (file_exists("./templates/". $_GET['page'].".php")){
     include_once "./templates/". $_GET['page'].".php";
 }else{
-    include_once "./templates/erreur404.php";
-}
-}else{
     include_once "./templates/accueil.php";
   }
-
+  }
 ?>
   </main>
   <footer>
